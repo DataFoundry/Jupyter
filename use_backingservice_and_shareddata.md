@@ -72,7 +72,7 @@
 1. 启动jupyter应用  
 
     ```  
-    oc run rstudio --image=registry.dataos.io/guestbook/jupyter --env GRANT_SUDO=true
+    oc run jupyter --image=registry.dataos.io/guestbook/jupyter --env GRANT_SUDO=true
     oc expose dc jupyter  --port=8888
     oc expose svc jupyter
     ```  
