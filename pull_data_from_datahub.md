@@ -13,13 +13,14 @@
 
     #datahub客户端登录
     !/usr/bin/datahub_login datahub_username datahub_password
-
+    
     #创建DATAHUB数据池
     !datahub dp create dptest file://$PWD
 
     #下载已订购数据-每日各首府城市空气质量报告
     !datahub pull Meteorological/capital_AQI_data:test dptest
-
+    import time
+    time.sleep(2)
     #数据分析
     import json
     import pandas as pd
