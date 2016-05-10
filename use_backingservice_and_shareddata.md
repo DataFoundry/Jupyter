@@ -85,8 +85,8 @@
 
     ```  
     def del_mongo_id(mongo_doc):
-    del mongo_doc['_id']
-    return mongo_doc
+        del mongo_doc['_id']
+        return mongo_doc
 
     #连接mongo backingservice
     #获取连接信息
@@ -115,7 +115,6 @@
     coll_data=pd.read_json(coll_data,orient='records')
     source_cols = coll_data.columns
     coll_data.columns = [s.replace('.','-') for s in source_cols]
-    data_records = coll_data[data_list].to_json(orient="records")
 
     city_name = json.loads(coll_data['city_name'].to_json(orient="values"))
     del coll_data['city_name']
