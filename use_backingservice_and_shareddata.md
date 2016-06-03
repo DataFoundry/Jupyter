@@ -95,10 +95,10 @@
     from pymongo import MongoClient
     import os
     share_data_uri = 'mongodb://' +  \
-    os.environ["BSI_MYMONGODB_USERNAME"] +':' + \
-    os.environ["BSI_MYMONGODB_PASSWORD"] +'@' + \
-    os.environ["BSI_MYMONGODB_HOST"]     +':' + \
-    os.environ["BSI_MYMONGODB_PORT"]     +'/' + \
+    os.environ["BSI_MONGODB_MYMONGODB_USERNAME"] +':' + \
+    os.environ["BSI_MONGODB_MYMONGODB_PASSWORD"] +'@' + \
+    os.environ["BSI_MONGODB_MYMONGODB_HOST"]     +':' + \
+    os.environ["BSI_MONGODB_MYMONGODB_PORT"]     +'/' + \
     'aqi_demo'
 
     print(share_data_uri)
